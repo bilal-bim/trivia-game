@@ -1,0 +1,162 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the capital of France?",
+    "options": ["London", "Berlin", "Paris", "Madrid"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "category": "Geography"
+  },
+  {
+    "id": "q2",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "category": "Science"
+  },
+  {
+    "id": "q3",
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "category": "Art"
+  },
+  {
+    "id": "q4",
+    "question": "What is the largest mammal in the world?",
+    "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "category": "Nature"
+  },
+  {
+    "id": "q5",
+    "question": "In which year did World War II end?",
+    "options": ["1944", "1945", "1946", "1947"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "category": "History"
+  },
+  {
+    "id": "q6",
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Go", "Gd", "Au", "Ag"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "category": "Science"
+  },
+  {
+    "id": "q7",
+    "question": "Which programming language was created by Brendan Eich?",
+    "options": ["Python", "Java", "JavaScript", "C++"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "category": "Technology"
+  },
+  {
+    "id": "q8",
+    "question": "What is the smallest country in the world?",
+    "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "category": "Geography"
+  },
+  {
+    "id": "q9",
+    "question": "Who wrote the novel '1984'?",
+    "options": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Isaac Asimov"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "category": "Literature"
+  },
+  {
+    "id": "q10",
+    "question": "What is the speed of light in vacuum?",
+    "options": ["299,792,458 m/s", "300,000,000 m/s", "299,000,000 m/s", "301,000,000 m/s"],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "category": "Physics"
+  },
+  {
+    "id": "q11",
+    "question": "Which ocean is the largest?",
+    "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+    "correctAnswer": 3,
+    "difficulty": "easy",
+    "category": "Geography"
+  },
+  {
+    "id": "q12",
+    "question": "What does HTML stand for?",
+    "options": ["HyperText Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "HyperText Modern Language"],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "category": "Technology"
+  },
+  {
+    "id": "q13",
+    "question": "Who composed 'The Four Seasons'?",
+    "options": ["Mozart", "Bach", "Vivaldi", "Beethoven"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "category": "Music"
+  },
+  {
+    "id": "q14",
+    "question": "What is the hardest natural substance on Earth?",
+    "options": ["Gold", "Iron", "Diamond", "Platinum"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "category": "Science"
+  },
+  {
+    "id": "q15",
+    "question": "Which country has the most time zones?",
+    "options": ["Russia", "United States", "China", "France"],
+    "correctAnswer": 3,
+    "difficulty": "hard",
+    "category": "Geography"
+  },
+  {
+    "id": "q16",
+    "question": "What is the most abundant gas in Earth's atmosphere?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "category": "Science"
+  },
+  {
+    "id": "q17",
+    "question": "Who invented the telephone?",
+    "options": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Benjamin Franklin"],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "category": "History"
+  },
+  {
+    "id": "q18",
+    "question": "What is the currency of Japan?",
+    "options": ["Yuan", "Won", "Yen", "Rupee"],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "category": "Geography"
+  },
+  {
+    "id": "q19",
+    "question": "Which element has the atomic number 1?",
+    "options": ["Helium", "Hydrogen", "Lithium", "Carbon"],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "category": "Chemistry"
+  },
+  {
+    "id": "q20",
+    "question": "What is the largest desert in the world?",
+    "options": ["Sahara", "Gobi", "Antarctica", "Arabian"],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "category": "Geography"
+  }
+]

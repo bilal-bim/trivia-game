@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 10 npm run dev)",
+      "Bash(npm run test:run:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)",
+      "Bash(timeout 5 npm run dev)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(timeout 10s npm run dev)",
+      "Bash(npm test)",
+      "Bash(PORT=3002 npm run dev)",
+      "Bash(curl:*)"
+    ],
+    "deny": []
+  }
+}
