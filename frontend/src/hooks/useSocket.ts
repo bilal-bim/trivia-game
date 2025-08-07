@@ -37,8 +37,9 @@ export const useSocket = () => {
     socketService.on('room-joined', (data) => {
       console.log('Room joined event received:', data);
       dispatch(setRoomCode(data.roomCode));
-      dispatch(setPlayers(data.players));
-      dispatch(setIsHost(data.player.isHost));
+      // Players will be updated via players-update event
+      // The joining player is not a host
+      dispatch(setIsHost(false));
     });
 
     socketService.on('room-created', (data) => {
@@ -106,11 +107,12 @@ export const useSocket = () => {
       socket.emit('join-room', { roomCode, playerName }, (response: any) => {
         console.log('Join room response:', response);
         if (response.success) {
-          console.log('Successfully joined room');
+          console.log('Successfully joined room with playerId:', response.playerId);
           // Set room code and navigate to lobby
           dispatch(setRoomCode(roomCode));
           dispatch(setPhase('lobby'));
           dispatch(setIsHost(false));
+          // The players list will be updated via the players-update event
         } else {
           console.error('Failed to join room:', response.error);
           alert(`Failed to join room: ${response.error}`);
@@ -131,6 +133,13 @@ export const useSocket = () => {
           dispatch(setRoomCode(response.roomCode));
           dispatch(setPhase('lobby'));
           dispatch(setIsHost(true));
+          // Initialize with the host player
+          dispatch(setPlayers([{
+            id: response.playerId,
+            name: playerName,
+            score: 0,
+            isHost: true
+          }]));
         } else {
           console.error('Failed to create room:', response.error);
         }
