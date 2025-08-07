@@ -44,7 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
               We encountered an unexpected error. This usually happens due to a temporary issue.
             </p>
             
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {import.meta.env.DEV && this.state.error && (
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-left">
                 <h3 className="font-medium text-red-800 mb-2">Error Details:</h3>
                 <pre className="text-xs text-red-700 overflow-auto">
