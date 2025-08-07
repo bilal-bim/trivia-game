@@ -40,8 +40,9 @@ export class GameService {
       players: new Map([[hostId, host]]),
       questions: this.getRandomQuestions(10), // Default 10 questions
       currentQuestionIndex: -1,
-      gameState: 'waiting',
+      gameState: 'waiting' as const,  // Explicitly set as const
       createdAt: new Date(),
+      gameStartedAt: undefined,  // Explicitly set as undefined
       settings: {
         maxPlayers: 20,
         questionTimeLimit: 30,
@@ -52,7 +53,7 @@ export class GameService {
       scores: new Map([[hostId, 0]])
     };
     
-    console.log(`Room ${roomCode} created with state: ${gameRoom.gameState}`);
+    console.log(`Room ${roomCode} created with state: ${gameRoom.gameState}, questionIndex: ${gameRoom.currentQuestionIndex}`);
 
     this.gameRooms.set(roomCode, gameRoom);
     this.playerToRoom.set(hostId, roomCode);
@@ -71,10 +72,17 @@ export class GameService {
     }
 
     console.log(`Join room attempt - Room ${roomCode} state: ${room.gameState}`);
+    console.log(`Room details: players=${room.players.size}, started=${room.gameStartedAt}, questionIndex=${room.currentQuestionIndex}`);
 
     if (room.gameState !== 'waiting') {
       console.log(`Cannot join room ${roomCode} - game state is ${room.gameState}, not 'waiting'`);
-      return { success: false, error: 'Game already started' };
+      // Reset room state if game hasn't actually started
+      if (!room.gameStartedAt && room.currentQuestionIndex === -1) {
+        console.log(`Resetting room ${roomCode} state to 'waiting' (was incorrectly set to ${room.gameState})`);
+        room.gameState = 'waiting';
+      } else {
+        return { success: false, error: 'Game already started' };
+      }
     }
 
     if (room.players.size >= room.settings.maxPlayers) {
