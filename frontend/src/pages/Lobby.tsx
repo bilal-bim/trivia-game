@@ -9,6 +9,10 @@ const Lobby: React.FC = () => {
   const { startGame } = useSocket();
   const gameState = useAppSelector(state => state.game);
 
+  // Debug logging
+  console.log('Lobby - Current players:', gameState.players);
+  console.log('Lobby - Is host:', gameState.isHost);
+
   const handleStartGame = () => {
     if (gameState.players.length < 2) {
       alert('You need at least 2 players to start the game!');

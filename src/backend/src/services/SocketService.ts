@@ -59,6 +59,7 @@ export class SocketService {
           
           // Send initial players update
           const players = this.gameService.getRoomPlayers(roomCode);
+          console.log(`Sending initial players-update for room ${roomCode}, players:`, players);
           socket.emit('players-update', { players });
           
           console.log(`Room created: ${roomCode} by ${playerName} (${hostId})`);
@@ -122,7 +123,12 @@ export class SocketService {
             
             // Send updated players list to all players
             const players = this.gameService.getRoomPlayers(roomCode);
+            console.log(`Sending players-update to room ${roomCode}, players:`, players);
             this.io.to(roomCode).emit('players-update', { players });
+            
+            // Debug: Check who's in the room
+            const socketsInRoom = await this.io.in(roomCode).fetchSockets();
+            console.log(`Sockets in room ${roomCode}:`, socketsInRoom.map(s => s.id));
           }
           
           console.log(`Player ${playerName} (${result.playerId}) joined room ${roomCode}`);

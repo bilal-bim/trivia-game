@@ -58,6 +58,7 @@ class SocketService {
   on(event: string, callback: (data: any) => void): void {
     if (this.socket) {
       this.socket.on(event, callback);
+      console.log(`Registered listener for event: ${event}`);
     }
     // Store the listener for re-attachment on reconnect
     this.listeners.set(event, callback);
