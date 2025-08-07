@@ -60,7 +60,7 @@ class TriviaGameServer {
 
   private setupRoutes(): void {
     // Health check route
-    this.app.get('/', (req, res) => {
+    this.app.get('/', (req: express.Request, res: express.Response) => {
       res.json({
         success: true,
         message: 'Trivia Game Backend API',
